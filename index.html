@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="next tech waves" content="Best UI/UX design company in Indore">
+    <meta name="description"
+        content="Best UI design agency in Indore specializing in creating stunning user interfaces for websites and applications.">
+    <meta name="keywords" content="UI design, design agency, website design, website development, Indore, India">
     <title>Next Tech Waves</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -15,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="logo.css">
     <style>
@@ -525,9 +530,17 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script>
         AOS.init();
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('WPH24bMw0peEFK-Nz');
+        })();
+
         var myVar;
         function myFunction() {
             myVar = setTimeout(showPage, 3000);
@@ -537,6 +550,40 @@
             document.getElementById("loader").style.display = "none";
             document.getElementById("myDiv").style.display = "block";
         }
+
+        // Function to send email
+        function sendMail(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form input values
+            const fullname = document.querySelector('input[name="fullname"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const message = document.querySelector('input[name="message"]').value;
+            const contact = document.querySelector('input[name="contact"]').value;
+
+            // Set emailjs parameters
+            const templateParams = {
+                from_name: fullname,
+                email: email,
+                message: message,
+                contact: contact
+            };
+            console.log(templateParams)
+
+            // Send email using emailjs
+            emailjs.send('service_jl9oesf', 'template_quhg32z', templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    toastr.success('Email sent successfully!'); // Show success message using Toastr
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    toastr.error('An error occurred while sending the email.'); // Show error message using Toastr
+                });
+        }
+
+        // Add event listener to the form submit button
+        document.querySelector('form').addEventListener('submit', sendMail);
+
     </script>
 
 </body>
