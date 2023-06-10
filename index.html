@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Tech Waves</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="logo.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&family=Roboto:wght@100&display=swap');
+
+        .nav-item1 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .custom-ul-style {
+            margin-right: 100px !important;
+        }
+
+        .custom-ul-style li {
+            font-family: "Poppins";
+            font-weight: 1px !important;
+            font-size: 10px !important;
+            margin: 0 5px;
+            padding: 0;
+        }
+
+
+        .head-container {
+            background: linear-gradient(96.74deg,
+                    #030623 46.91%,
+                    #00063c 96.16%) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-container {
+
+
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            height: auto;
+            min-height: 40vh;
+            background: linear-gradient(96.74deg,
+                    #030623 46.91%,
+                    #00063c 96.16%) !important;
+
+        }
+
+        .image {
+
+            /* max-width: 99%; */
+            height: auto;
+            margin-left: 30px;
+        }
+
+        .content {
+            word-spacing: 8px;
+            letter-spacing: 2px;
+            margin: 0 20px 0 150px;
+            /* padding: 0 80px 0 20px; */
+            /* background-color: red; */
+
+        }
+
+        .content h1 {
+            word-spacing: 6px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            /* padding: 0 80px 0 20px; */
+            /* background-color: red; */
+
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .main-container {
+                flex-direction: column;
+                min-height: 40vh;
+                text-align: center;
+            }
+
+            .content {
+                font-size: 0.2rem !important;
+                padding: 0 35px;
+                margin-left: 0;
+                margin-top: 10px;
+
+            }
+
+            .image {
+                max-width: 95%;
+                margin-bottom: 40px;
+            }
+
+            .custom-ul-style {
+                /* margin-right: 100px !important; */
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 1068px) {
+            .custom-ul-style {
+                /* margin-right: 100px !important; */
+                margin-right: 0 !important;
+            }
+        }
+
+        @media only screen and (max-width: 1201px) {
+            .image {
+                height: 200px;
+                /* max-width: 100%; */
+
+            }
+
+            .content {
+                word-spacing: normal;
+                letter-spacing: 2px;
+                margin: 0 20px 0 50px;
+                /* padding: 0 80px 0 20px; */
+                /* background-color: red; */
+
+            }
+
+        }
+
+        /* Mobile View */
+        @media only screen and (max-width: 767px) {
+            .content {
+                margin: 0;
+
+            }
+
+            .content h1 {
+                font-size: 1.2rem !important;
+                padding: 0 20px;
+                word-spacing: normal;
+                margin: 0 0 20px 0;
+
+            }
+
+            .image {
+                margin: 25px 0 10px 0;
+                height: 170px;
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <div>
+        <section>
+            <nav class="navbar cl-effect-4 navbar-expand-lg bg-body-tertiary background1">
+                <div class="container-fluid">
+                    <img class="logo-navbar" height="80px" src="img/logo.png" alt="" style="margin-left: 25px;">
+                    <button id="nav-toggle-button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white"
+                            class="bi bi-list custom-svg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul class="navbar-nav custom-ul-style">
+                            <li class="nav-item">
+                                <a class="nav-link active nav-item1" aria-current="page" href="#home"
+                                    style="font-family: Poppins; font-size: large;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item1" href="#services"
+                                    style="font-family: Poppins; font-size: large;">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item1" href="#about"
+                                    style="font-family: Poppins; font-size: large;">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item1" href="#work"
+                                    style="font-family: Poppins; font-size: large;">Catch Us At</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-item1" href="#contact"
+                                    style="font-family: Poppins; font-size: large;">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                <div class="head-container">
+                    <div class="main-container">
+                        <div class="inner-container" style="margin-right: 20px;">
+                            <img class="image" src="img/head-banner.png" alt="Your Image">
+                        </div>
+                        <div class="content">
+                            <h1 style="color: aliceblue; font-family: Poppins;">We Are Fully Fledged<span
+                                    class=" orange" style="font-family: Poppins;">
+                                    Design
+                                    Solution Provider </span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </section>
+
+    <section name="services" id="services">
+        <div class="container pr-5 pl-5" data-aos="fade-up" style="color: grey;">
+
+            <h1 class="orange header1">Our Services</h1>
+            <center>
+                <h3 class="onlyheader" style="max-width: 70%; text-align: center;">We Provide Various Type of
+                    digital
+                    Solutions That You
+                    Can Choose And Customize Your Digital Products</h3>
+
+            </center>
+        </div>
+
+        <div class="container">
+            <div id="boxes" class="row">
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-down">
+                    <div class="box">
+                        <style>
+                            @media (min-width: 481px) and (max-width: 880px) {
+                                #saal {
+                                    font-size: small;
+                                }
+                            }
+                        </style>
+                        <h5 id="saal">UI/UX Design</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+                    <div class="box">
+                        <style>
+                            @media (min-width: 481px) and (max-width: 880px) {
+                                .web {
+                                    padding: 37px;
+                                }
+                            }
+                        </style>
+                        <center>
+                            <h5>
+
+                                Web Design
+                                &
+                                Development</h5>
+                        </center>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-down">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Graphics
+                            Designing</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Illustrations</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-down">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Video Editing</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">User Research
+                            &
+                            Testing</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-down">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Motion Graphics</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Digital Marketing</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-down">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Branding</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">AR/VR
+                            UI Design</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-down">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Logo
+                            Designing</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+                    <div class="box">
+                        <h5 id="saal" style="text-align: center;">Fashion
+                            Illustrations</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" data-aos="fade-up">
+            <h1 class="orange header1">About Us</h1>
+        </div>
+    </section>
+
+    <section name="about" id="about">
+        <div class="banner background1">
+            <div class="row mb-5">
+                <div class="col-sm-5 order-md-2" style="text-align: center;">
+                    <img src="img/Group 19.png" alt="">
+                </div>
+                <div class="col-sm-7 order-md-1 " data-aos="fade-down">
+                    <h3 style="color: aliceblue; text-align: justify; margin: 0 20px; ">We are a creative agency
+                        comprised of a team of
+                        skilled
+                        freelancers
+                        who specialize in user-friendly and visually stunning designs. Our goal is to help
+                        businesses
+                        succeed by providing high-quality design and marketing services that are tailored to their
+                        unique needs. We pride ourselves on our creativity, passion, and dedication to our clients.
+                    </h3>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-sm-5" data-aos="fade-down" style="text-align: center;">
+                    <img src="img/Group 25.png" alt="" style="padding-top: 30px;">
+                </div>
+                <div class="col-sm-7" data-aos="fade-up">
+                    <h2 class="orange" style="text-align: center; margin: 10px 20px;">Vision</h2>
+                    <h3 style="color: aliceblue; text-align: justify;">Our vision is to be the go-to agency for
+                        businesses looking for
+                        top-quality design and marketing services. We strive to build long-lasting relationships
+                        with
+                        our clients by delivering exceptional work and providing a high level of customer service.
+                        We
+                        aim to constantly innovate and stay up-to-date with the latest design and marketing trends
+                        to
+                        provide the best possible solutions for our clients.
+                    </h3>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-sm-5 order-md-2 d-flex justify-content-center" data-aos="fade-up"
+                    style="display: flex; align-items: center; justify-content: center;">
+                    <img src="img/Group 24.png" alt="" style="padding-top: 40px;">
+                </div>
+                <div class="col-sm-7 order-md-1" data-aos="fade-down">
+                    <h2 class="orange" style="text-align: center; padding-top: 20px;">Mission</h2>
+                    <h3 style="color: aliceblue; text-align: justify; margin: 0 20px;">Our mission is to help businesses
+                        achieve their
+                        goals through
+                        innovative and strategic design solutions. We aim to create designs that not only look great
+                        but
+                        also effectively communicate our clients' brand messaging and values. With our expertise in
+                        design and marketing, we can help businesses stand out in a crowded market and achieve
+                        long-term
+                        success.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="available">
+        <div id="first-container" class="container">
+            <div id="second-container" class="inner-container">
+                <h1 class="orange">Catch Us At</h1>
+                <div id="logo-row" class="row">
+                    <div id="logo-col" class="col">
+                        <a target="_blank" href="https://99designs.com/profiles/5427205">
+                            <img src="img/at/logo1.png" alt="Logo 1" class="logo">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a target="_blank" href="https://www.behance.net/nexttechwaves">
+                            <img src="img/at/behance.png" alt="Logo 2" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a target="_blank" href="https://www.designcrowd.com/designer-account/my-profile.aspx">
+                            <img src="img/at/logo3.png" alt="Logo 3" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a target="_blank"
+                            href="https://www.peopleperhour.com/freelancer/krishanu/your-digital-design-solutions-partn/9413042/edit">
+                            <img src="img/at/peopleperhour.jpg" alt="Logo 4" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#">
+                            <img src="img/at/gurucom2473.jpg" alt="Logo 5" class="logo" height="50rem">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#">
+                            <img src="img/at/logo2.png" alt="Logo 6" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <a target="_blank" href="https://www.upwork.com/agencies/1665471754369691648/">
+                            <img src="img/at/logo7.png" alt="Logo 7" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a target="_blank" href="https://dribbble.com/Nexttechwaves">
+                            <img src="img/at/logo8.png" alt="Logo 8" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a target="_blank" href="https://www.freelancer.in/u/NextTechWaves">
+                            <img src="img/at/logo9.png" alt="Logo 9" class="logo" height="50rem">
+                        </a>
+                    </div>
+                    <div id="log" class="col-lg-2 col-md-4 col-sm-6">
+                        <a target="_blank" href="https://www.fiverr.com/nexttechwaves?up_rollout=true">
+                            <img src="img/at/Font-Fiverr-Logo.jpg" alt="Logo 10" class="logo" height="50rem">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="contact">
+        <div class="" data-aos="fade-up" style="margin-top: 40px; padding: 0;">
+            <h1 class="orange header1">Contact Us</h1>
+        </div>
+        <div class="container-fluid background1" style="padding-top: 10px;">
+            <form method="post" action="/post">
+                <div class="row">
+                    <div class="col-md-6 mb-3 mt-3 tab-pad" data-aos="fade-down">
+                        <input type="text" name="fullname" class="form-control background2" placeholder="Full Name">
+                    </div>
+                    <div class="col-md-6 mt-3 tab-pad" data-aos="fade-down">
+                        <input type="text" name="email" class="form-control background2" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mt-3" data-aos="fade-up">
+                        <input type="text" name="message" class="form-control background2"
+                            placeholder="Services You are here for">
+                    </div>
+                    <div class="col-md-6 mb-3 mt-3" data-aos="fade-up">
+                        <input type="text" name="contact" class="form-control background2" placeholder="Contact No.">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mb-5" data-aos="fade-up">
+                    <button class="btn btn-light" type="submit">Submit</button>
+                </div>
+            </form>
+
+
+            <footer>
+                <div class="container-fluid footer-background">
+                    <div class="row">
+                        <div id="logo-footer" class="col-md-4 col-sm-12">
+                            <img src="img/logo.png" class="order-1" alt="">
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-center order-2">
+                            <h4 class="orange mt-3">NEXTTECHWAVES</h4>
+                            <h6 class="fonting">Where Creativity Meets Innovation</h6>
+                        </div>
+                        <div class="col-md-4 col-sm-12 d-flex align-items-center justify-content-end order-3">
+                            <a target="_blank"
+                                href="https://www.linkedin.com/company/94873294/admin/?feedType=following">
+                                <img src="img/linkedin.png" alt="" class="icon">
+
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/accounts/onetap/?next=%2F">
+                                <img src="img/instagram.png" alt="" class="icon">
+
+                            </a>
+                            <a target="_blank" href="https://twitter.com/KrishanuMi28324">
+
+                                <img src="img/twitter.png" alt="" class="icon">
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100092148965501">
+                                <img src="img/facebook.png" alt="" class="icon">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+        var myVar;
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
